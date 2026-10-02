@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         ListView listasimples = findViewById(R.id.ListView);
         ArrayAdapter<String> usb = new ArrayAdapter<>(getApplicationContext(),R.layout.itens, R.id.textView, nomes);
         listasimples.setAdapter(usb);
-        listasimples.setOnItemClickListener((parent, view, position, id) -> {});
-        Toast.makeText(getApplicationContext(), nomes(position), Toast.LENGTH_LONG).show();
+        listasimples.setOnItemClickListener((parent, view, position, id) -> {
+            Toast.makeText(getApplicationContext(), nomes[position], Toast.LENGTH_LONG).show();
+        });
+
     }
 }
